@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        
+    }
+    .el1{
+        
+        padding: 10px;
+        background-color:rgb(120, 103, 103);
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+        font-family: audiowide;
+        }
+       
+    ul{
+        display: flex;
+       
+    }
+    ul li{
+        list-style-type: none;
+        padding: 5px;
+        
+    }
+    
+ img{
+        width: 100%;
+    }
+ .el3{
+        padding: 10%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .el3a>img{
+        width:400px;
+        border:2px solid black;
+        border-radius: 50%;
+        border-style: double;
+        padding: 3%;
+     }
+   .el3b{
+          padding:5%;
+        } 
+ .el4{
+        padding: 10%;
+        background-color: lightskyblue;
+        display: flex;
+        color: white;
+        justify-content: space-evenly;
+    }
+    .el4a>img{
+        width: 400px;
+        border:2px solid black;
+        border-radius: 50%;
+        border-style: double;
+        padding: 3%;
+     }
+    .el4b{
+          padding:5%;
+    }
+    .el5{
+      padding: 5%;
+        text-align: center;
+        background-color: aliceblue;
+    }
+    .el5a>img{
+        width: 300px;
+     }
+   .el5>h1,.el5>p{
+    padding: 20px 0px;
+   }
+.el5c{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+   }
+   .el5ca>img,.el5cb>img,.el5cc>img{
+    border: 1px solid black;
+    border-radius: 50%;
+    border-style:groove;
+    padding: 2%;
+ }
+.el6{
+        display: flex;
+        padding: 3%;
+        justify-content: center;
+        gap: 3%; 
+        background-color: beige;      
+    }
+ .el6a>p{
+        text-align: center;
+        background-color:beige ;
+     }
+ i{
+        border: 3px solid black;
+        border-radius: 50%;
+        border-style: double;
+        padding: 20px;
+    }
+ button{
+        background-color:lightblue;
+        color: black;
+        padding: 10px;
+    }
+ .el2a{
+        position: relative;
+    }
+    .el2a>h1{
+       position: absolute;
+       top: 30%;
+       left: 40%;
+        color:white;
+       font-size: 60px;
+     }
+    .el2a>p{
+         position: absolute; 
+    
+        top: 50%;
+        color: white;
+        left: 20%;
+        font-size: 20px;
+    }
+    .el2a>button{
+        position: absolute;
+        top: 70%;
+        left: 50%
+    }  
+    
+    
+    @media (min-width: 1024px) and (max-width: 1440px) {
+    .el3, .el4 {
+        flex-direction: row;
+        padding: 5%;
+    }
+    .el3a>img, .el4a>img {
+        width: 300px; /* Smaller image size for laptops */
+    }
+    .el5c {
+        grid-template-columns: 1fr 1fr; /* 2 columns for laptops */
+    }
+    .el5ca>img, .el5cb>img, .el5cc>img {
+        width: 250px;
+    }
+    h1 {
+        font-size: 50px; /* Reduce font size for laptop */
+    }
+    p {
+        font-size: 16px; /* Adjust text size for readability */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .el1 {
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center; /* Center align text */
+    }
+    ul {
+        flex-direction: column; /* Stack nav items vertically */
+        padding: 10px;
+    }
+    ul li {
+        padding: 10px 0; /* Add more padding for better touch targets */
+    }
+    .el3, .el4 {
+        flex-direction: column;
+        padding: 5%; /* Adjust padding for small screens */
+    }
+    .el3a>img, .el4a>img {
+        width: 200px; /* Smaller images for mobile */
+    }
+    .el5c {
+        grid-template-columns: 1fr; /* One column layout */
+    }
+    .el5ca>img, .el5cb>img, .el5cc>img {
+        width: 150px;
+    }
+    .el2a>h1 {
+        font-size: 35px; /* Reduce hero section text size */
+        left: 20%;
+    }
+    .el2a>p {
+        font-size: 16px; /* Adjust paragraph size */
+        left: 10%;
+    }
+    .el2a>button {
+        top: 80%; /* Adjust button positioning */
+        left: 40%;
+    }
+    button {
+        padding: 8px; /* Adjust button size */
+    }
+    i {
+        padding: 10px; /* Smaller social media icons */
+    }
+    h1 {
+        font-size: 35px;
+    }
+    p {
+        font-size: 14px;
+    }
+}
+
+
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 3s ease-in-out;
+}
+ul li a:hover {
+    color: lightblue;
+}
+
+.el2a h1, .el2a p {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 3s ease-in-out, transform 3s ease-in-out;
+}
+.el2a:hover h1, .el2a:hover p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+img {
+    transition: transform 0.4s ease-in-out;
+}
+img:hover {
+    transform: scale(1.1);
+}
+
+button {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+button:hover {
+    background-color: lightcoral;
+    transform: scale(1.05);
+}
+i {
+    transition: transform 0.3s ease-in-out;
+}
+i:hover {
+    transform: translateY(-5px);
+}
+.el3, .el4 {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+.el3 {
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.3s;
+}
+.el4 {
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.el5ca, .el5cb, .el5cc {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.el5ca:hover, .el5cb:hover, .el5cc:hover {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+</style>
+<body>
+
+   <div class="el1">
+    <div class="el1a">
+        <h1>Urban</h1>
+    </div>
+    <div class="el1b">
+       <ul>
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Element">Element</a></li>
+       </ul>
+    </div>
+   </div>
+   <div class="el2">
+ <div class="el2a" id="Home">
+        <img src="urban.jpg" alt="">
+        <h1>This is Urban</h1>
+         <p>Aliquam libero augue varius non odio nec faucibus congue 
+             felis quisque a diam rutrum tempus massa accumsan faucibus purus.</p> 
+             <button>Learn More</button>
+    </div>
+   </div>
+   <div class="el3" id="About">
+    <div class="el3a">
+        <img src="gravida.jpg" alt="">
+    </div>
+    <div class="el3b">
+        <h1>Maecenas a gravida quam</h1><br>
+        <p>Etiam posuere hendrerit arcu, ac blandit nulla. Sed congue malesuada nibh, a varius odio vehicula aliquet. Aliquam consequat, nunc quis sollicitudin aliquet, enim magna cursus auctor lacinia nunc ex blandit augue. Ut vitae neque fermentum, luctus elit fermentum, porta augue. Nullam ultricies, turpis at fermentum iaculis, nunc justo dictum dui, non aliquet erat nibh non ex.Sed congue malesuada nibh, a varius odio vehicula aliquet. Aliquam consequat, nunc quis sollicitudin aliquet, enim magna cursus auctor lacinia nunc ex blandit augue. Ut vitae neque fermentum, luctus elit fermentum, porta augue. Nullam ultricies, turpis at fermentum iaculis, nunc justo dictum dui, non aliquet erat nibh non ex.
+<br><br>
+<button>Learn  more</button>
+    </div>
+</div>
+   <div class="el4">
+    <div class="el4b">
+        <h1>Suspendisse quis massa vel justo</h1><br>
+        <p>Etiam posuere hendrerit arcu, ac blandit nulla. Sed congue malesuada nibh, a varius odio vehicula aliquet. Aliquam consequat, nunc quis sollicitudin aliquet, enim magna cursus auctor lacinia nunc ex blandit augue. Ut vitae neque fermentum, luctus elit fermentum, porta augue. Nullam ultricies, turpis at fermentum iaculis, nunc justo dictum dui, non aliquet erat nibh non ex.Sed congue malesuada nibh, a varius odio vehicula aliquet. Aliquam consequat, nunc quis sollicitudin aliquet, enim magna cursus auctor lacinia nunc ex blandit augue. Ut vitae neque fermentum, luctus elit fermentum, porta augue. Nullam ultricies, turpis at fermentum iaculis, nunc justo dictum dui, non aliquet erat nibh non ex.
+<br><br>
+<button >Learn more</button>
+    </div>
+    <div class="el4a">
+        <img src="massa.jpg" alt="">
+    </div>
+   </div>
+   <div class="el5">
+    <h1 class="el5a">Aliquam ipsum purus dolor</h1>
+    <p class="el5b">Cras sagittis turpis sit amet est tempus, sit amet consectetur purus tincidunt.</p>
+    <div class="el5c" id="Element">
+        <div class="el5ca">
+            <img src="pic03.jpg" alt="" >
+            <p>Sed congue elit malesuada nibh, a varius odio vehicula aliquet. Aliquam consequat, nunc quis sollicitudin aliquet.</p><br>
+            <button>Learn More</button>
+            </div>
+        <div class="el5cb">
+            <img src="pic05.jpg" alt="" >
+            <p>Sed congue elit malesuada nibh, a varius odio vehicula aliquet. Aliquam consequat, nunc quis sollicitudin aliquet.</p><br>
+            <button>Learn More</button>
+            </div>
+        <div class="el5cc">
+    <img src="pic04.jpg" alt="" >
+            <p>Sed congue elit malesuada nibh, a varius odio vehicula aliquet. Aliquam consequat, nunc quis sollicitudin aliquet.</p><br>
+            <button>Learn More</button>
+            </div>
+    </div>
+   </div>
+   <div class="el6">
+    <div><i class="fa-brands fa-twitter"></i></div>
+    <div><i class="fa-brands fa-facebook"></i></div>
+    <div><i class="fa-brands fa-instagram"></i></div>
+    <div><i class="fa-brands fa-snapchat"></i></div>
+    </div>
+    <div class="el6a">
+   <p>© Untitled. All rights reserved. Design: TEMPLATED. Images: Unsplash.</p>
+    </div>
+</body>
+</html>
